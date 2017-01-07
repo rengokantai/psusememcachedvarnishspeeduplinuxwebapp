@@ -61,3 +61,12 @@ service apache2 restart
 service varnish restart
 ```
 when we visit the page we can remove :6081
+
+
+
+###5 Demo: Forcing Page Refresh
+```
+$curl = curl_init("http://beta");
+curl+set_opt($curl,CURLOPT_CUSTOMREQUEST,"PURGE");
+curl_exec($curl);
+```
