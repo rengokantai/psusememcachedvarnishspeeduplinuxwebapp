@@ -1,6 +1,6 @@
 # psusememcachedvarnishspeeduplinuxwebapp
-##4. Caching Full Pages with Varnish
-###2 Demo: Installing and Using Varnish
+## 4. Caching Full Pages with Varnish
+### 2 Demo: Installing and Using Varnish
 ```
 apt-get install varnish
 ```
@@ -34,7 +34,7 @@ then
 service varnish restart
 ```
 
-####3:56
+#### 3:56
 ```
 vim /etc/apache2/ports.conf
 ```
@@ -64,7 +64,7 @@ when we visit the page we can remove :6081
 
 
 
-###5 Demo: Forcing Page Refresh
+### 5 Demo: Forcing Page Refresh
 ```
 $curl = curl_init("http://beta");
 curl+set_opt($curl,CURLOPT_CUSTOMREQUEST,"PURGE");
