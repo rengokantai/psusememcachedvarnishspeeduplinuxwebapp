@@ -70,3 +70,21 @@ $curl = curl_init("http://beta");
 curl+set_opt($curl,CURLOPT_CUSTOMREQUEST,"PURGE");
 curl_exec($curl);
 ```
+
+
+## 5. Caching Individual Page Elements with Varnish
+### 1 Using Edge Side Includes
+### 2 Demo: Creating an Edge Side Include
+```
+vim /etc/varnish/default.vcl
+```
+```
+sub vcl_fetch {
+  set beresp.grace = 30m;
+  set beresp.do_esi = true;
+}
+```
+then
+```
+service varnish restart
+```
